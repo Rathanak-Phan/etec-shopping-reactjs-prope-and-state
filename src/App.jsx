@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import './App.css'
 import Header from './components/Header';
+import user from './data/user';
+import Products from './page/Products';
+import products from './data/products';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -15,17 +18,13 @@ function App() {
     setCount(count + 1);
   }
 
-  const user = {
-    username: "pengleng",
-    email: "pengleng@example.com",
-    profile: "https://i.pinimg.com/736x/80/81/da/8081da1d281f800f67b976ccd29cb2ce.jpg"
-  }
-
   return (
     <>
     <div className='bg-blue-900 h-20 flex justify-center text-gray-50'>
       <Header user={user}/>
     </div>
+
+    <Products products={products}/>
 
       <div className='w-screen h-screen flex flex-col gap-10 items-center'>
         <div className='flex items-center gap-5 mt-20'>
